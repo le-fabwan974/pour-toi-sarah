@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Amour - Surprises et Mini-Jeux</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Voyage à travers l'Amour ❤️</h1>
+            <p>Chaque niveau cache une surprise pour toi !</p>
+        </header>
+
+        <!-- Niveau 1 : Pac-Man Style -->
+        <div class="game-container" id="level-1">
+            <h2>Niveau 1 : Pac-Man Romantique</h2>
+            <canvas id="pacmanCanvas"></canvas>
+            <button onclick="completeLevel(1)">Terminer le niveau</button>
+        </div>
+
+        <!-- Niveau 2 : Jeu de Mémoire -->
+        <div class="game-container" id="level-2">
+            <h2>Niveau 2 : Souvenirs d'Amour</h2>
+            <div id="memoryGame"></div>
+            <button onclick="completeLevel(2)">Terminer le niveau</button>
+        </div>
+
+        <!-- Niveau 3 : Snake -->
+        <div class="game-container" id="level-3">
+            <h2>Niveau 3 : Serpent d'Amour</h2>
+            <canvas id="snakeCanvas"></canvas>
+            <button onclick="completeLevel(3)">Terminer le niveau</button>
+        </div>
+
+        <!-- Ajoute d'autres niveaux ici... -->
+
+        <!-- Popup Surprise -->
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup()">&times;</span>
+                <img id="popup-image" src="" alt="Surprise Image">
+                <p id="popup-text"></p>
+                <p class="encouragement-text">Bravo mon amour ! Continue, la prochaine surprise est encore plus belle !</p>
+                <button id="next-level" onclick="goToNextLevel()">Passer au niveau suivant</button>
+            </div>
+        </div>
+
+        <!-- Instructions pour le niveau suivant -->
+        <div class="next-level-instructions" id="instructions-1">
+            <h3>Passer au niveau suivant :</h3>
+            <button onclick="loadLevel(2)">Niveau 2</button>
+        </div>
+        <!-- Ajoute d'autres instructions ici... -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
